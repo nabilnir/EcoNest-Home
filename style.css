@@ -1,0 +1,144 @@
+/*common design*/
+.pri-font{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.sec-font{
+  font-family: "Montaga", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pri-color{
+   color: #2C3E36;
+}
+
+.btn-primary{
+    background-color: #D4B483;
+    border: 0px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #2C3E36;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    color: #83764F;
+    font-size: large;
+    font-weight: 800;
+}
+
+body{
+    padding: 10px 150px;
+    background-color: #F6F4EF;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navs{
+    position: relative;
+    text-decoration: none;
+    color: #2C3E36;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.navs:hover {
+    color: #83764F;
+}
+
+.navs::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #D4B483;
+    transition: width 0.3s ease;
+}
+
+.navs:hover::after {
+    width: 100%;
+}
+
+/*banner style*/
+.banner{
+    justify-items: center;
+    text-align: center;
+}
+
+.banner h1{
+    font-size: 40px;
+    margin-top: 100px;
+}
+
+.banner p{
+    margin: 20px 0;
+}
+
+.banner button{
+    margin: 20px;
+    font-size: large;
+
+}
+
+.banner img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    body{
+        padding: 0;
+    }
+
+    .logo{
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
+    }
+    .navbar{
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+           justify-content: space-around;
+           margin-left: -20px;
+   }  
+      
+   .banner h1{
+           font-size: 2rem;
+   }
+   .banner p{
+
+    margin: 20px auto; /* Centers the text block */
+    max-width: 800px; /* Adjust this value as needed */
+    line-height: 1.6; /* Improves readability */
+    font-size: 1.1rem; /* Slightly larger font size */
+    padding: 0 20px; 
+   }
+     .banner button{
+      
+        font-size: small;
+     }
+   .banner img{
+    width: 80%;
+   }
+}
